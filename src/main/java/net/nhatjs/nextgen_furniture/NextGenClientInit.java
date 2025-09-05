@@ -1,6 +1,6 @@
 package net.nhatjs.nextgen_furniture;
 
-import com.mrcrayfish.framework.FrameworkSetup;
+import com.mrcrayfish.framework.FrameworkForge;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
