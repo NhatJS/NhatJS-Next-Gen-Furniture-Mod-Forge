@@ -90,7 +90,7 @@ public class LaptopBlock extends Block {
         }
         if (stage == 8) {
             if (screenOn) {
-                level.setBlock(pos, state.setValue(SCREEN_ON, false).setValue(BOOT_STAGE, 0), Block.UPDATE_ALL);
+                level.setBlock(pos, state.setValue(SCREEN_ON, false).setValue(BOOT_STAGE, 0).setValue(OPEN_STAGE, 7), Block.UPDATE_ALL);
             } else {
                 level.setBlock(pos, state.setValue(BOOT_STAGE, 0), Block.UPDATE_ALL);
                 schedule(level, pos, 10);
