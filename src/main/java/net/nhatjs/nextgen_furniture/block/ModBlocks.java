@@ -19,11 +19,23 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, NhatJSNextGenFurnitureMod.MOD_ID);
 
+    public static final RegistryObject<Block> CHAIR_WHITE = registerBlock("chair_white", () -> new ChairBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> CHAIR_WOOD_OAK = registerBlock("chair_wood_oak", () -> new ChairBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
     public static final RegistryObject<Block> LAPTOP = registerBlock("laptop", () -> new LaptopBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
-    public static final RegistryObject<Block> TABLE_2X1_BLACK = registerBlock("table_2x1_black", () -> new Table2x1Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> TABLE_2X1_BLACK = registerBlock("table_2x1_black", () -> new Table2x1CenterBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
-    public static final RegistryObject<Block> TABLE_2X1_WHITE = registerBlock("table_2x1_white", () -> new Table2x1Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> TABLE_2X1_BLACK_ALT = registerBlock("table_2x1_black_alt", () -> new Table2x1LeftBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_BLACK_ALT_2 = registerBlock("table_2x1_black_alt_2", () -> new Table2x1RightBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WHITE = registerBlock("table_2x1_white", () -> new Table2x1CenterBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WHITE_ALT = registerBlock("table_2x1_white_alt", () -> new Table2x1LeftBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WHITE_ALT_2 = registerBlock("table_2x1_white_alt_2", () -> new Table2x1RightBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));
     public static final RegistryObject<Block> TABLE_3X1_BLACK = registerBlock("table_3x1_black", () -> new Table3x1Block(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE).strength(1.0F).noOcclusion()));

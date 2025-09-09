@@ -20,10 +20,30 @@ public class Table3x1Block extends Block {
         super(properties);
     }
 
+    private static final VoxelShape HORIZONTAL = Shapes.or(
+            Block.box(-16, 15.25, 0, 32, 16, 16),
+            Block.box(-15.5, 0, 0.5, -14.5, 15.25, 1.5),
+            Block.box(-15.5, 0, 14.5, -14.5, 15.25, 15.5),
+            Block.box(30.5, 0, 0.5, 31.5, 15.25, 1.5),
+            Block.box(30.5, 0, 14.5, 31.5, 15.25, 15.5)
+    );
+
+
+    private static final VoxelShape VERTICAL = Shapes.or(
+            Block.box(0, 15.25, -16, 16, 16, 32),
+            Block.box(14.5, 0, -15.5, 15.5, 15.25, -14.5),
+            Block.box(0.5, 0, -15.5, 1.5, 15.25, -14.5),
+            Block.box(14.5, 0, 30.5, 15.5, 15.25, 31.5),
+            Block.box(0.5, 0, 30.5, 1.5, 15.25, 31.5)
+    );
+
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return switch (state.getValue(FACING)) {
-            default -> box(0, 0.05, 0, 16, 16, 16);
+            default -> HORIZONTAL;
+            case SOUTH -> HORIZONTAL;
+            case EAST -> VERTICAL;
+            case WEST -> VERTICAL;
         };
     }
 

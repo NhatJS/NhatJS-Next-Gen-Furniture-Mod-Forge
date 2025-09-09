@@ -19,11 +19,13 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LAPTOP.get()))
                     .title(Component.translatable("creativetab.next_gen_furniture_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModBlocks.LAPTOP.get());
+                        pOutput.accept(ModBlocks.CHAIR_WHITE.get());
+                        pOutput.accept(ModBlocks.CHAIR_WOOD_OAK.get());
                         pOutput.accept(ModBlocks.TABLE_2X1_BLACK.get());
                         pOutput.accept(ModBlocks.TABLE_2X1_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_BLACK.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_WHITE.get());
+                        pOutput.accept(ModBlocks.LAPTOP.get());
                     })
                     .build());
 
