@@ -12,11 +12,6 @@ public class ChairBlockEntity extends Entity {
         super(pEntityType, pLevel);
     }
 
-    public static boolean availableAt(Level level, BlockPos pos)
-    {
-        return level.getEntitiesOfClass(ChairBlockEntity.class, new AABB(pos)).isEmpty();
-    }
-
     @Override
     protected void defineSynchedData() {
 
