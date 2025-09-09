@@ -25,8 +25,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static net.minecraft.network.syncher.EntityDataSerializers.DIRECTION;
-
 public class ChairBlock extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
