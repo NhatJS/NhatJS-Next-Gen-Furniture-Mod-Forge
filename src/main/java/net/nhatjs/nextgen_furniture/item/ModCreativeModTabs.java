@@ -16,7 +16,7 @@ public class ModCreativeModTabs {
 
 
     public static final RegistryObject<CreativeModeTab> NEXT_GEN_FURNITURE_TAB = CREATIVE_MODE_TABS.register("next_gen_furniture_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LAPTOP.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.NEXTGEN_FURNITURE_LOGO.get()))
                     .title(Component.translatable("creativetab.next_gen_furniture_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.CHAIR_WHITE.get());
@@ -25,6 +25,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.TABLE_2X1_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_BLACK.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_WHITE.get());
+                        pOutput.accept(ModBlocks.TABLE_DINING_WHITE.get());
+                        pOutput.accept(ModBlocks.TABLE_DINING_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.PICTURE_FRAME.get());
                         pOutput.accept(ModBlocks.LAPTOP.get());
                     })
                     .build());
