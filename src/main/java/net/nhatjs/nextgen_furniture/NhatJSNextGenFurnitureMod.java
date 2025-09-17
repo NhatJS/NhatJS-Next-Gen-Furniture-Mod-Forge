@@ -38,7 +38,7 @@ public class NhatJSNextGenFurnitureMod
         modEventBus.addListener(this::commonSetup);
 
         ModBlocks.register(modEventBus);
-        ModEntities.register(modEventBus);
+        ModEntities.REGISTER.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
         NextGenClientInit.init(modEventBus);

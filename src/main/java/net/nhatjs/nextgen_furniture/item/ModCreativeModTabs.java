@@ -25,10 +25,17 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.TABLE_2X1_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_BLACK.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_WHITE.get());
+                        pOutput.accept(ModBlocks.COFFEE_TABLE_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_DINING_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_DINING_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.TV_STAND_WOOD_OAK.get());
                         pOutput.accept(ModBlocks.PICTURE_FRAME.get());
+                        pOutput.accept(ModBlocks.TRASH_CAN_BLACK.get());
+                        pOutput.accept(ModBlocks.TRASH_CAN_WHITE.get());
+                        pOutput.accept(ModBlocks.SOFA.get());
+                        pOutput.accept(ModBlocks.FLOOR_LAMP.get());
                         pOutput.accept(ModBlocks.LAPTOP.get());
+                        pOutput.accept(ModBlocks.TV_OLED.get());
                     })
                     .build());
 
