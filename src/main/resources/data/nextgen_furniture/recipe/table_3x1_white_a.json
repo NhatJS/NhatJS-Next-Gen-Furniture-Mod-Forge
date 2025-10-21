@@ -13,8 +13,7 @@
     }
   },
   "result": {
-    "item": "nextgen_furniture:table_3x1_white",
+    "id": "nextgen_furniture:table_3x1_white",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

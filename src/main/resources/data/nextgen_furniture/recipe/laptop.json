@@ -30,8 +30,7 @@
     }
   },
   "result": {
-    "item": "nextgen_furniture:laptop",
+    "id": "nextgen_furniture:laptop",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

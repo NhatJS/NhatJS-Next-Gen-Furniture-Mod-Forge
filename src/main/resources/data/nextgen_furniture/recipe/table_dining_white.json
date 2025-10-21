@@ -2,8 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "2  ",
-    "211",
+    "111",
     "2 2"
   ],
   "key": {
@@ -11,12 +10,11 @@
       "item": "minecraft:white_concrete"
     },
     "2": {
-      "item": "minecraft:stick"
+      "item": "minecraft:black_concrete"
     }
   },
   "result": {
-    "item": "nextgen_furniture:chair_white",
+    "id": "nextgen_furniture:table_dining_white",
     "count": 2
-  },
-  "show_notification": true
+  }
 }

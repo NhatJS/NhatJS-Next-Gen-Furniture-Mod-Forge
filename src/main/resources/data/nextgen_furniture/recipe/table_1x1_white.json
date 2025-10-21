@@ -2,21 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "2  ",
-    "211",
-    "2 2"
+    "11",
+    "22"
   ],
   "key": {
     "1": {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:white_concrete"
     },
     "2": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "nextgen_furniture:chair_wood_oak",
+    "id": "nextgen_furniture:table_1x1_white",
     "count": 2
-  },
-  "show_notification": true
+  }
 }

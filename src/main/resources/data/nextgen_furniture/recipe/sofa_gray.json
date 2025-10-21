@@ -7,12 +7,11 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:white_wool"
+      "item": "minecraft:gray_wool"
     }
   },
   "result": {
-    "item": "nextgen_furniture:sofa_white",
+    "id": "nextgen_furniture:sofa_gray",
     "count": 2
-  },
-  "show_notification": true
+  }
 }

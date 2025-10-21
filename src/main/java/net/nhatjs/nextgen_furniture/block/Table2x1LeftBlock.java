@@ -84,8 +84,8 @@ public class Table2x1LeftBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        super.use(state, level, pos, player, hand, hit);
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        super.useWithoutItem(state, level, pos, player, hit);
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();

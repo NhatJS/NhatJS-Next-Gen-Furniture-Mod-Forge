@@ -2,19 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "121"
+    " 2 ",
+    " 1 ",
+    "3 3"
   ],
   "key": {
     "1": {
       "item": "minecraft:oak_planks"
     },
     "2": {
-      "item": "minecraft:white_bed"
+      "item": "minecraft:redstone_lamp"
+    },
+    "3": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "nextgen_furniture:bed_white_wood_oak",
+    "id": "nextgen_furniture:floor_lamp",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

@@ -3,6 +3,7 @@ package net.nhatjs.nextgen_furniture.entity.client;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -22,11 +23,6 @@ public class ChairBlockEntity extends Entity {
         this(level);
         this.setPos(source.getX() + 0.5, source.getY() + yOffset, source.getZ() + 0.5);
         this.setRot(direction.getOpposite().toYRot(), 0F);
-    }
-
-    @Override
-    protected void defineSynchedData() {
-
     }
 
     @Override
@@ -56,6 +52,11 @@ public class ChairBlockEntity extends Entity {
                 this.level().updateNeighbourForOutputSignal(pos, this.level().getBlockState(pos).getBlock());
             }
         }
+    }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+
     }
 
     @Override

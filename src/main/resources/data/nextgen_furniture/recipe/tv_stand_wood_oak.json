@@ -17,8 +17,7 @@
     }
   },
   "result": {
-    "item": "nextgen_furniture:tv_stand_wood_oak",
+    "id": "nextgen_furniture:tv_stand_wood_oak",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

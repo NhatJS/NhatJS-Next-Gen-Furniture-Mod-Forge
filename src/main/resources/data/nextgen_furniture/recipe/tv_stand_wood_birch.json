@@ -2,8 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " 2 ",
-    " 1 ",
+    "121",
     "3 3"
   ],
   "key": {
@@ -11,15 +10,14 @@
       "item": "minecraft:birch_planks"
     },
     "2": {
-      "item": "minecraft:redstone_lamp"
+      "item": "minecraft:chest"
     },
     "3": {
-      "item": "minecraft:stick"
+      "item": "minecraft:black_concrete"
     }
   },
   "result": {
-    "item": "nextgen_furniture:floor_lamp_b",
+    "id": "nextgen_furniture:tv_stand_wood_birch",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

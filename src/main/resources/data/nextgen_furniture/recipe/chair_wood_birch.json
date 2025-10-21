@@ -2,19 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "121"
+    "2  ",
+    "211",
+    "2 2"
   ],
   "key": {
     "1": {
       "item": "minecraft:birch_planks"
     },
     "2": {
-      "item": "minecraft:gray_bed"
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "nextgen_furniture:bed_gray_wood_birch",
-    "count": 1
-  },
-  "show_notification": true
+    "id": "nextgen_furniture:chair_wood_birch",
+    "count": 2
+  }
 }

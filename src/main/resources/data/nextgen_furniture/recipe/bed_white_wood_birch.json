@@ -2,23 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "121",
-    "3 3"
+    "121"
   ],
   "key": {
     "1": {
       "item": "minecraft:birch_planks"
     },
     "2": {
-      "item": "minecraft:chest"
-    },
-    "3": {
-      "item": "minecraft:black_concrete"
+      "item": "minecraft:white_bed"
     }
   },
   "result": {
-    "item": "nextgen_furniture:tv_stand_wood_birch",
+    "id": "nextgen_furniture:bed_white_wood_birch",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

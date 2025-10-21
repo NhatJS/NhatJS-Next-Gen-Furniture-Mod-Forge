@@ -63,8 +63,8 @@ public class LaptopBlock extends Block {
     public BlockState mirror(BlockState s, Mirror m) { return s.rotate(m.getRotation(s.getValue(FACING))); }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos,
-                                 Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                 Player player, BlockHitResult hit) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
 
         int stage = state.getValue(OPEN_STAGE);
