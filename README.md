@@ -1,11 +1,10 @@
-# **📌 NhatJS's NGMC Project Beta (Forge 1.20.1):**
+# **📌 NhatJS's NGMC Project Beta (Forge 1.20.1 & 1.21.1):**
 
 - Check out another source codes for [Fabric/QuiltMC](https://github.com/NhatJS/NhatJS-Next-Gen-Furniture-Mod-Fabric) or [NeoForge](https://github.com/NhatJS/NhatJS-Next-Gen-Furniture-Mod-NeoForge)
 
 ## 🚀 Forge Supported Loaders
-- **Minecraft**: 1.20.1
+- **Minecraft**: 1.20.1, 1.21.1
 - **Shaders & Emissive Textures works**: Optifine
-- **Dependency**: [MrCrayfish’s Framework API](https://www.curseforge.com/minecraft/mc-mods/framework)
 
 ## 📦 Installation:
 1. Download the correct **[Forge loader](https://files.minecraftforge.net/net/minecraftforge/forge/)** for your Minecraft version.
@@ -15,7 +14,6 @@
 
 ## 📖 License
 - **NGMC Project Beta** © NhatJS.
-- Depends on **MrCrayfish’s Framework**, licensed under **GNU Lesser General Public License (LGPL)**.
 - Free to use in modpacks. Please don’t re-upload outside CurseForge/Modrinth/GitHub.
 
 ## 📜 Rules:
