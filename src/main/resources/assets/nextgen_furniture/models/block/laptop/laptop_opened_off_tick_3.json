@@ -5,7 +5,7 @@
 		"electronic": "nextgen_furniture:block/electronic",
 		"electronic2": "nextgen_furniture:block/electronic2",
 		"electronic3": "nextgen_furniture:block/electronic3",
-		"emissive": "nextgen_furniture:block/emissive",
+		"emissive": "nextgen_furniture:block/emissive_e",
 		"screen": "nextgen_furniture:block/black_screen",
 		"particle": "block/white_concrete"
 	},
