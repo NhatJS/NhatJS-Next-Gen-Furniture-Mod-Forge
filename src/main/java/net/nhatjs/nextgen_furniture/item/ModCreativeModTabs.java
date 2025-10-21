@@ -17,10 +17,13 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> NEXT_GEN_FURNITURE_TAB = CREATIVE_MODE_TABS.register("next_gen_furniture_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.NEXTGEN_FURNITURE_LOGO.get()))
-                    .title(Component.translatable("creativetab.next_gen_furniture_tab"))
+                    .title(Component.translatable("itemgroup.nextgen_furniture.nextgen_furniture_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.CHAIR_WHITE.get());
                         pOutput.accept(ModBlocks.CHAIR_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.CHAIR_WOOD_BIRCH.get());
+                        pOutput.accept(ModBlocks.TABLE_1X1_BLACK.get());
+                        pOutput.accept(ModBlocks.TABLE_1X1_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_2X1_BLACK.get());
                         pOutput.accept(ModBlocks.TABLE_2X1_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_3X1_BLACK.get());
@@ -28,12 +31,20 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.COFFEE_TABLE_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_DINING_WHITE.get());
                         pOutput.accept(ModBlocks.TABLE_DINING_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.TABLE_DINING_WOOD_BIRCH.get());
                         pOutput.accept(ModBlocks.TV_STAND_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.TV_STAND_WOOD_BIRCH.get());
+                        pOutput.accept(ModBlocks.BED_GRAY_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.BED_GRAY_WOOD_BIRCH.get());
+                        pOutput.accept(ModBlocks.BED_WHITE_WOOD_OAK.get());
+                        pOutput.accept(ModBlocks.BED_WHITE_WOOD_BIRCH.get());
                         pOutput.accept(ModBlocks.PICTURE_FRAME.get());
                         pOutput.accept(ModBlocks.TRASH_CAN_BLACK.get());
                         pOutput.accept(ModBlocks.TRASH_CAN_WHITE.get());
-                        pOutput.accept(ModBlocks.SOFA.get());
+                        pOutput.accept(ModBlocks.SOFA_GRAY.get());
+                        pOutput.accept(ModBlocks.SOFA_WHITE.get());
                         pOutput.accept(ModBlocks.FLOOR_LAMP.get());
+                        pOutput.accept(ModBlocks.FLOOR_LAMP_B.get());
                         pOutput.accept(ModBlocks.LAPTOP.get());
                         pOutput.accept(ModBlocks.TV_OLED.get());
                     })

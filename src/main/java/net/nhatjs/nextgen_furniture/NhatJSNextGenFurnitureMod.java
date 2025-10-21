@@ -1,8 +1,6 @@
 package net.nhatjs.nextgen_furniture;
 
 import com.mojang.logging.LogUtils;
-import com.mrcrayfish.framework.FrameworkSetup;
-import com.mrcrayfish.framework.api.FrameworkAPI;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,7 +39,7 @@ public class NhatJSNextGenFurnitureMod
         ModEntities.REGISTER.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
-        NextGenClientInit.init(modEventBus);
+        NhatJSNextGenFurnitureModClient.init(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

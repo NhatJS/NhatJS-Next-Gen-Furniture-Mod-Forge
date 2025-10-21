@@ -40,8 +40,6 @@ public class FloorLampBlock extends Block {
         };
     }
 
-
-
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {

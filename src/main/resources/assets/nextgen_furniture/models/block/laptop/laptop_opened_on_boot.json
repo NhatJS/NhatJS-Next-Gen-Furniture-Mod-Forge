@@ -1,6 +1,7 @@
 {
 	"parent": "nextgen_furniture:block/laptop/laptop_opened",
 	"textures": {
+		"emissive": "nextgen_furniture:block/emissive",
 		"screen": "nextgen_furniture:block/black_screen"
 	}
 }
