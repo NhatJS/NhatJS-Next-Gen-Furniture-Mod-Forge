@@ -13,6 +13,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> NEXTGEN_FURNITURE_LOGO = ITEMS.register("nextgen_furniture_logo",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPUTER_FAN_BLADE_WHITE = ITEMS.register("computer_fan_blade_white",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPUTER_RAM_GAMING = ITEMS.register("computer_ram_gaming",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPUTER_CPU = ITEMS.register("computer_cpu",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

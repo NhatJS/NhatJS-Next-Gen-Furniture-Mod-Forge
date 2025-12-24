@@ -2,7 +2,9 @@ package net.nhatjs.nextgen_furniture;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -13,8 +15,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nhatjs.nextgen_furniture.block.ModBlocks;
+import net.nhatjs.nextgen_furniture.blockentity.ModBlockEntities;
+import net.nhatjs.nextgen_furniture.blockentity.renderer.ConsoleRenderer;
+import net.nhatjs.nextgen_furniture.blockentity.renderer.LaptopRenderer;
+import net.nhatjs.nextgen_furniture.blockentity.renderer.TrashCanRenderer;
 import net.nhatjs.nextgen_furniture.entity.ModEntities;
-import net.nhatjs.nextgen_furniture.entity.client.renderer.ChairRenderer;
+import net.nhatjs.nextgen_furniture.entity.renderer.ChairRenderer;
 import net.nhatjs.nextgen_furniture.item.ModCreativeModTabs;
 import net.nhatjs.nextgen_furniture.item.ModItems;
 import org.slf4j.Logger;
@@ -37,6 +43,7 @@ public class NhatJSNextGenFurnitureMod
 
         ModBlocks.register(modEventBus);
         ModEntities.REGISTER.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
         NhatJSNextGenFurnitureModClient.init(modEventBus);

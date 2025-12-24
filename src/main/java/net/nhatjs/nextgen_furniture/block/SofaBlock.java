@@ -4,9 +4,12 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -19,10 +22,14 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.nhatjs.nextgen_furniture.entity.ModEntities;
 import net.nhatjs.nextgen_furniture.entity.client.ChairBlockEntity;
+
+import java.util.List;
 
 
 public class SofaBlock extends Block {
@@ -146,8 +153,19 @@ public class SofaBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result)
-    {
-        return ChairBlockEntity.create(level, pos, 0.35, player, state.getValue(DIRECTION));
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if(!level.isClientSide()) {
+            Entity entity = null;
+            List<ChairBlockEntity> entities = level.getEntities(ModEntities.SOFA.get(), new AABB(pos), sofa -> true);
+            if(entities.isEmpty()) {
+                entity = ModEntities.SOFA.get().spawn(((ServerLevel) level), pos, MobSpawnType.TRIGGERED);
+            } else {
+                entity = entities.get(0);
+            }
+
+            player.startRiding(entity);
+        }
+
+        return InteractionResult.SUCCESS;
     }
 }

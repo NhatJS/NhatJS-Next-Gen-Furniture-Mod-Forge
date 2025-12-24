@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nextgen_furniture:block/model_renderer/game_console_extra"
+    }
+  }
+}
