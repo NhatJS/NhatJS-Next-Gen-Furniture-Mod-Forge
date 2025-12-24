@@ -1,0 +1,27 @@
+[24Dec2025 10:52:08.654] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, E:\MinecraftGradle\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, nextgen_furniture, --all, --output, E:\MinecraftWorkspaces\NhatJS-Next-Gen-Furniture-Mod-Forge\src\generated\resources, --existing, E:\MinecraftWorkspaces\NhatJS-Next-Gen-Furniture-Mod-Forge\src\main\resources]
+[24Dec2025 10:52:08.656] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.4+8-LTS-274
+[24Dec2025 10:52:08.657] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.4 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[24Dec2025 10:52:08.729] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[24Dec2025 10:52:08.808] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///E:/MinecraftGradle/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[24Dec2025 10:52:09.400] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[24Dec2025 10:52:09.956] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, E:\MinecraftGradle\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, nextgen_furniture, --all, --output, E:\MinecraftWorkspaces\NhatJS-Next-Gen-Furniture-Mod-Forge\src\generated\resources, --existing, E:\MinecraftWorkspaces\NhatJS-Next-Gen-Furniture-Mod-Forge\src\main\resources]
+[24Dec2025 10:52:13.817] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 52.1.0, for MC 1.21.1 with MCP 20240808.132146
+[24Dec2025 10:52:13.817] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v52.1.0 Initialized
+[24Dec2025 10:52:13.842] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[24Dec2025 10:52:14.071] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [nextgen_furniture]
+[24Dec2025 10:52:14.113] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/E:/MinecraftGradle/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.1.0_mapped_official_1.21.1/forge-1.21.1-52.1.0_mapped_official_1.21.1-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[24Dec2025 10:52:14.114] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/E:/MinecraftGradle/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.1.0_mapped_official_1.21.1/forge-1.21.1-52.1.0_mapped_official_1.21.1-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[24Dec2025 10:52:14.197] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[24Dec2025 10:52:14.345] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 146 ms
+[24Dec2025 10:52:14.345] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[24Dec2025 10:52:14.396] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 50 ms
+[24Dec2025 10:52:14.396] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id nextgen_furniture
+[24Dec2025 10:52:14.398] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id nextgen_furniture finished after 2 ms
+[24Dec2025 10:52:14.399] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id nextgen_furniture
+[24Dec2025 10:52:14.405] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id nextgen_furniture finished after 6 ms
+[24Dec2025 10:52:14.405] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: nextgen_furniture
+[24Dec2025 10:52:14.411] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: nextgen_furniture finished after 5 ms
+[24Dec2025 10:52:14.411] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: nextgen_furniture
+[24Dec2025 10:52:14.525] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: nextgen_furniture finished after 113 ms
+[24Dec2025 10:52:14.525] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 327 ms
+[24Dec2025 10:52:14.531] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 308, old count: 309, new count: 309, removed stale: 0, written: 1

@@ -2,7 +2,9 @@ package net.nhatjs.nextgen_furniture;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -13,8 +15,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nhatjs.nextgen_furniture.block.ModBlocks;
+import net.nhatjs.nextgen_furniture.blockentity.ModBlockEntities;
 import net.nhatjs.nextgen_furniture.entity.ModEntities;
-import net.nhatjs.nextgen_furniture.entity.client.renderer.ChairRenderer;
+import net.nhatjs.nextgen_furniture.entity.renderer.ChairRenderer;
 import net.nhatjs.nextgen_furniture.item.ModCreativeModTabs;
 import net.nhatjs.nextgen_furniture.item.ModItems;
 import org.slf4j.Logger;
@@ -36,6 +39,7 @@ public class NhatJSNextGenFurnitureMod
         modEventBus.addListener(this::commonSetup);
 
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModEntities.REGISTER.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
@@ -43,6 +47,13 @@ public class NhatJSNextGenFurnitureMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener((ModelEvent.RegisterAdditional e) -> {
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN));
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN_ON));
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.GAME_CONSOLE_EXTRA));
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.TRASH_CAN_BLACK_EXTRA));
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.TRASH_CAN_WHITE_EXTRA));
+        });
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -72,6 +83,7 @@ public class NhatJSNextGenFurnitureMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
+            EntityRenderers.register(ModEntities.SOFA.get(), ChairRenderer::new);
         }
     }
 }
