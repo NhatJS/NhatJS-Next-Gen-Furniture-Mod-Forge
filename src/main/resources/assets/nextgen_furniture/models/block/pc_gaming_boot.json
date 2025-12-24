@@ -9,7 +9,7 @@
 		"4": "nextgen_furniture:block/electronic8",
 		"5": "nextgen_furniture:block/furniture",
 		"6": "nextgen_furniture:block/computer_fan_black",
-		"7": "nextgen_furniture:block/emissive",
+		"7": "nextgen_furniture:block/emissive_off",
 		"8": "nextgen_furniture:block/electronic9",
 		"9": "nextgen_furniture:block/computer_fan/computer_fan_white_boot",
 		"particle": "nextgen_furniture:block/electronic3"
