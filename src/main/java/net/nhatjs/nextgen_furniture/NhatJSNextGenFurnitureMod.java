@@ -83,7 +83,6 @@ public class NhatJSNextGenFurnitureMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.CHAIR.get(), ChairRenderer::new);
-            EntityRenderers.register(ModEntities.SOFA.get(), ChairRenderer::new);
         }
     }
 }

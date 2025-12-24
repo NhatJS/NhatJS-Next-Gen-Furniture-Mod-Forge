@@ -154,18 +154,6 @@ public class SofaBlock extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if(!level.isClientSide()) {
-            Entity entity = null;
-            List<ChairBlockEntity> entities = level.getEntities(ModEntities.SOFA.get(), new AABB(pos), sofa -> true);
-            if(entities.isEmpty()) {
-                entity = ModEntities.SOFA.get().spawn(((ServerLevel) level), pos, MobSpawnType.TRIGGERED);
-            } else {
-                entity = entities.get(0);
-            }
-
-            player.startRiding(entity);
-        }
-
-        return InteractionResult.SUCCESS;
+        return ChairBlockEntity.create(level, pos, 0.5, player, state.getValue(DIRECTION));
     }
 }

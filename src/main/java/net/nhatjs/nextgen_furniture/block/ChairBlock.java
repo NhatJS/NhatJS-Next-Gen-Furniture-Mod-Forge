@@ -76,6 +76,6 @@ public class ChairBlock extends Block {
         if (move == true) {
             return InteractionResult.SUCCESS;
         }
-        return ChairBlockEntity.create(level, pos, 0.4, player, state.getValue(DIRECTION));
+        return ChairBlockEntity.create(level, pos, 0.66, player, state.getValue(DIRECTION));
     }
 }
