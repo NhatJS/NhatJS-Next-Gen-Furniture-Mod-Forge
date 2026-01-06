@@ -19,6 +19,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COMPUTER_CPU = ITEMS.register("computer_cpu",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SCREWDRIVER = ITEMS.register("screwdriver",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DRAWER_WHITE = ITEMS.register("drawer_white",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

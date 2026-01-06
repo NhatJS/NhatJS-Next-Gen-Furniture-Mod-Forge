@@ -51,6 +51,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //misc
         Item stick = Items.STICK;
         Item ingotIron = Items.IRON_INGOT;
+        Block blockIron = Blocks.IRON_BLOCK;
 
         //glass pane
         Block glassPaneStainedBlack = Blocks.BLACK_STAINED_GLASS_PANE;
@@ -68,6 +69,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         RegistryObject<Block> keyboardMechanicalBlack = ModBlocks.KEYBOARD_MECHANICAL_BLACK;
         RegistryObject<Block> mouseGamingBlack = ModBlocks.MOUSE_GAMING_BLACK;
         RegistryObject<Item> computerFanBladeWhite = ModItems.COMPUTER_FAN_BLADE_WHITE;
+        RegistryObject<Item> drawerWhite = ModItems.DRAWER_WHITE;
+        RegistryObject<Block> drawer3KMWoodOakBase = ModBlocks.DRAWER_3_K_M_WOOD_OAK_BASE;
+        RegistryObject<Block> drawer3KMWoodBirchBase = ModBlocks.DRAWER_3_K_M_WOOD_BIRCH_BASE;
+        RegistryObject<Block> drawer2KMWoodOakBase = ModBlocks.DRAWER_2_K_M_WOOD_OAK_BASE;
+        RegistryObject<Block> drawer2KMWoodBirchBase = ModBlocks.DRAWER_2_K_M_WOOD_BIRCH_BASE;
+        RegistryObject<Block> table1x1WoodOak = ModBlocks.TABLE_1X1_WOOD_OAK;
+        RegistryObject<Block> table1x1WoodBirch = ModBlocks.TABLE_1X1_WOOD_BIRCH;
 
         //others
         Block bedGray = Blocks.GRAY_BED;
@@ -277,6 +285,91 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ingotIron), has(ingotIron))
                 .save(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.DRAWER_WHITE.get(), 3)
+                .pattern("1 1")
+                .pattern("111")
+                .define('1', concreteWhite)
+                .unlockedBy(getHasName(concreteWhite), has(concreteWhite))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_2_K_M_WOOD_BIRCH_BASE.get(), 2)
+                .pattern("111")
+                .pattern("2 2")
+                .pattern("222")
+                .define('1', planksBirch)
+                .define('2', concreteWhite)
+                .unlockedBy(getHasName(planksBirch), has(planksBirch))
+                .unlockedBy(getHasName(concreteWhite), has(concreteWhite))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_2_K_M_WOOD_BIRCH.get())
+                .pattern("1 ")
+                .pattern("12")
+                .define('1', drawerWhite.get())
+                .define('2', drawer2KMWoodBirchBase.get())
+                .unlockedBy(getHasName(drawerWhite.get()), has(drawerWhite.get()))
+                .unlockedBy(getHasName(drawer2KMWoodBirchBase.get()), has(drawer2KMWoodBirchBase.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_2_K_M_WOOD_OAK_BASE.get(), 2)
+                .pattern("111")
+                .pattern("2 2")
+                .pattern("222")
+                .define('1', planksOak)
+                .define('2', concreteWhite)
+                .unlockedBy(getHasName(planksOak), has(planksOak))
+                .unlockedBy(getHasName(concreteWhite), has(concreteWhite))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_2_K_M_WOOD_OAK.get())
+                .pattern("1 ")
+                .pattern("12")
+                .define('1', drawerWhite.get())
+                .define('2', drawer2KMWoodOakBase.get())
+                .unlockedBy(getHasName(drawerWhite.get()), has(drawerWhite.get()))
+                .unlockedBy(getHasName(drawer2KMWoodOakBase.get()), has(drawer2KMWoodOakBase.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_3_K_M_WOOD_BIRCH_BASE.get(), 2)
+                .pattern("111")
+                .pattern("222")
+                .pattern("222")
+                .define('1', planksBirch)
+                .define('2', concreteWhite)
+                .unlockedBy(getHasName(planksBirch), has(planksBirch))
+                .unlockedBy(getHasName(concreteWhite), has(concreteWhite))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_3_K_M_WOOD_BIRCH.get())
+                .pattern("1 ")
+                .pattern("12")
+                .pattern("1 ")
+                .define('1', drawerWhite.get())
+                .define('2', drawer3KMWoodBirchBase.get())
+                .unlockedBy(getHasName(drawerWhite.get()), has(drawerWhite.get()))
+                .unlockedBy(getHasName(drawer3KMWoodBirchBase.get()), has(drawer3KMWoodBirchBase.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_3_K_M_WOOD_OAK_BASE.get(), 2)
+                .pattern("111")
+                .pattern("222")
+                .pattern("222")
+                .define('1', planksOak)
+                .define('2', concreteWhite)
+                .unlockedBy(getHasName(planksOak), has(planksOak))
+                .unlockedBy(getHasName(concreteWhite), has(concreteWhite))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DRAWER_3_K_M_WOOD_OAK.get())
+                .pattern("1 ")
+                .pattern("12")
+                .pattern("1 ")
+                .define('1', drawerWhite.get())
+                .define('2', drawer3KMWoodOakBase.get())
+                .unlockedBy(getHasName(drawerWhite.get()), has(drawerWhite.get()))
+                .unlockedBy(getHasName(drawer3KMWoodOakBase.get()), has(drawer3KMWoodOakBase.get()))
+                .save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.FLOOR_LAMP.get())
                 .pattern(" 2 ")
                 .pattern(" 1 ")
@@ -382,6 +475,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(buttonStone), has(buttonStone))
                 .save(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_MODERN.get(), 2)
+                .pattern(" 1 ")
+                .pattern("121")
+                .pattern(" 1 ")
+                .define('1', ingotIron)
+                .define('2', redstoneLamp)
+                .unlockedBy(getHasName(ingotIron), has(ingotIron))
+                .unlockedBy(getHasName(redstoneLamp), has(redstoneLamp))
+                .save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MAINBOARD_GAMING.get())
                 .pattern("311")
                 .pattern("321")
@@ -454,6 +557,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(painting), has(painting))
                 .save(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.SCREWDRIVER.get())
+                .pattern("1  ")
+                .pattern(" 12")
+                .pattern(" 21")
+                .define('1', ingotIron)
+                .define('2', dyeBlack)
+                .unlockedBy(getHasName(ingotIron), has(ingotIron))
+                .unlockedBy(getHasName(dyeBlack), has(dyeBlack))
+                .save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SOFA_GRAY.get(), 2)
                 .pattern("111")
                 .pattern("111")
@@ -486,6 +599,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(stick), has(stick))
                 .save(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_1X1_WOOD_BIRCH.get(), 2)
+                .pattern("11")
+                .pattern("22")
+                .define('1', planksBirch)
+                .define('2', stick)
+                .unlockedBy(getHasName(planksBirch), has(planksBirch))
+                .unlockedBy(getHasName(stick), has(stick))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_1X1_WOOD_OAK.get(), 2)
+                .pattern("11")
+                .pattern("22")
+                .define('1', planksOak)
+                .define('2', stick)
+                .unlockedBy(getHasName(planksOak), has(planksOak))
+                .unlockedBy(getHasName(stick), has(stick))
+                .save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_2X1_BLACK.get())
                 .pattern("11")
                 .define('1', table1x1Black.get())
@@ -496,6 +627,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("11")
                 .define('1', table1x1White.get())
                 .unlockedBy(getHasName(table1x1White.get()), has(table1x1White.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_2X1_WOOD_BIRCH.get())
+                .pattern("11")
+                .define('1', table1x1WoodBirch.get())
+                .unlockedBy(getHasName(table1x1WoodBirch.get()), has(table1x1WoodBirch.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_2X1_WOOD_OAK.get())
+                .pattern("11")
+                .define('1', table1x1WoodOak.get())
+                .unlockedBy(getHasName(table1x1WoodOak.get()), has(table1x1WoodOak.get()))
                 .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.TABLE_DINING_WHITE.get(), 2)
@@ -619,6 +762,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(planksOak), has(planksOak))
                 .unlockedBy(getHasName(chest), has(chest))
                 .unlockedBy(getHasName(concreteBlack), has(concreteBlack))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WASHING_MACHINE.get())
+                .pattern("121")
+                .pattern("434")
+                .pattern("141")
+                .define('1', concreteBlack)
+                .define('2', buttonStone)
+                .define('3', blockIron)
+                .define('4', redstone)
+                .unlockedBy(getHasName(concreteBlack), has(concreteBlack))
+                .unlockedBy(getHasName(buttonStone), has(buttonStone))
+                .unlockedBy(getHasName(blockIron), has(blockIron))
+                .unlockedBy(getHasName(redstone), has(redstone))
                 .save(output);
     }
 }

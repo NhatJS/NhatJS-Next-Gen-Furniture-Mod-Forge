@@ -53,6 +53,7 @@ public class NhatJSNextGenFurnitureMod
             e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.GAME_CONSOLE_EXTRA));
             e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.TRASH_CAN_BLACK_EXTRA));
             e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.TRASH_CAN_WHITE_EXTRA));
+            e.register(ModelResourceLocation.inventory(NhatJSNextGenFurnitureModClient.LIGHT_MODERN_EXTRA));
         });
 
         // Register the item to a creative tab

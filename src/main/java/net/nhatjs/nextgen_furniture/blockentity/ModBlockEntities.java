@@ -7,9 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureMod;
 import net.nhatjs.nextgen_furniture.block.ModBlocks;
-import net.nhatjs.nextgen_furniture.blockentity.client.ConsoleBlockEntity;
-import net.nhatjs.nextgen_furniture.blockentity.client.LaptopBlockEntity;
-import net.nhatjs.nextgen_furniture.blockentity.client.TrashCanBlockEntity;
+import net.nhatjs.nextgen_furniture.blockentity.client.*;
 
 import java.util.function.Supplier;
 
@@ -29,6 +27,17 @@ public final class ModBlockEntities {
             () -> BlockEntityType.Builder.of(TrashCanBlockEntity::new,
                     ModBlocks.TRASH_CAN_BLACK.get(),
                     ModBlocks.TRASH_CAN_WHITE.get()).build(null));
+
+    public static final Supplier<BlockEntityType<LightBlockEntity>> LIGHT_EXTRA = BLOCK_ENTITIES.register("light_extra",
+            () -> BlockEntityType.Builder.of(LightBlockEntity::new,
+                    ModBlocks.LIGHT_MODERN.get()).build(null));
+
+    public static final Supplier<BlockEntityType<DrawerBlockEntity>> DRAWER = BLOCK_ENTITIES.register("drawer",
+            () -> BlockEntityType.Builder.of(DrawerBlockEntity::new,
+                    ModBlocks.DRAWER_2_K_M_WOOD_OAK.get(),
+                    ModBlocks.DRAWER_2_K_M_WOOD_BIRCH.get(),
+                    ModBlocks.DRAWER_3_K_M_WOOD_OAK.get(),
+                    ModBlocks.DRAWER_3_K_M_WOOD_BIRCH.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
