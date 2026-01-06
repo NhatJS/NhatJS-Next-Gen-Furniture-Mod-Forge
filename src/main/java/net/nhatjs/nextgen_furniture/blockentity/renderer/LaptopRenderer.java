@@ -4,29 +4,27 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureModClient;
 import net.nhatjs.nextgen_furniture.block.LaptopBlock;
-import net.nhatjs.nextgen_furniture.block.ModBlocks;
 import net.nhatjs.nextgen_furniture.blockentity.client.LaptopBlockEntity;
 
 public class LaptopRenderer implements BlockEntityRenderer<LaptopBlockEntity> {
-    private final BakedModel screenOff;
-    private final BakedModel screenOn;
+    private final Minecraft mc = Minecraft.getInstance();
 
     public LaptopRenderer(BlockEntityRendererProvider.Context ctx) {
-        screenOff = Minecraft.getInstance().getBlockRenderer()
-                .getBlockModel(ModBlocks.LAPTOP_SCREEN_OFF.get().defaultBlockState());
-        screenOn = Minecraft.getInstance().getBlockRenderer()
-                .getBlockModel(ModBlocks.LAPTOP_SCREEN_ON.get().defaultBlockState());
-    }
+        }
 
     @Override
     public void render(LaptopBlockEntity be, float tickDelta, PoseStack poseStack,
@@ -48,6 +46,11 @@ public class LaptopRenderer implements BlockEntityRenderer<LaptopBlockEntity> {
         float openDeg = t * 110f;
         boolean powered = be.isPowered();
 
+        BakedModel screen = mc.getModelManager().getModel(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN);
+        BakedModel screen_on = mc.getModelManager().getModel(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN_ON);
+
+        ModelBlockRenderer bmr = mc.getBlockRenderer().getModelRenderer();
+
         poseStack.pushPose();
         poseStack.translate(0.5, 0, 0.5);
         poseStack.mulPose(Axis.YP.rotationDegrees(yaw));
@@ -60,12 +63,9 @@ public class LaptopRenderer implements BlockEntityRenderer<LaptopBlockEntity> {
 
         VertexConsumer vc = multiBufferSource.getBuffer(RenderType.cutout());
 
-        Minecraft.getInstance().getBlockRenderer().getModelRenderer().renderModel(
-                poseStack.last(), vc, null, screenOff, 1,1,1, light, overlay);
-
+        bmr.renderModel(poseStack.last(), vc, state, screen, 1,1,1, light, overlay);
         if (powered) {
-            Minecraft.getInstance().getBlockRenderer().getModelRenderer().renderModel(
-                    poseStack.last(), vc, null, screenOn, 1,1,1, light, overlay);
+            bmr.renderModel(poseStack.last(), vc, state, screen_on, 1,1,1, LightTexture.FULL_BRIGHT, overlay);
         }
 
         poseStack.popPose();

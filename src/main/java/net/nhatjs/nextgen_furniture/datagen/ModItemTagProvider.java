@@ -28,5 +28,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.TABLE_2X1_WHITE.get().asItem())
                 .add(ModBlocks.TABLE_2X1_WHITE_ALT.get().asItem())
                 .add(ModBlocks.TABLE_2X1_WHITE_ALT_2.get().asItem());
+
+        tag(ModTags.Items.TABLE_2X1_WOOD_OAK)
+                .add(ModBlocks.TABLE_2X1_WOOD_OAK.get().asItem())
+                .add(ModBlocks.TABLE_2X1_WOOD_OAK_ALT.get().asItem())
+                .add(ModBlocks.TABLE_2X1_WOOD_OAK_ALT_2.get().asItem());
+
+        tag(ModTags.Items.TABLE_2X1_WOOD_BIRCH)
+                .add(ModBlocks.TABLE_2X1_WOOD_BIRCH.get().asItem())
+                .add(ModBlocks.TABLE_2X1_WOOD_BIRCH_ALT.get().asItem())
+                .add(ModBlocks.TABLE_2X1_WOOD_BIRCH_ALT_2.get().asItem());
     }
 }

@@ -10,11 +10,11 @@ import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureMod;
 import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureModClient;
 import net.nhatjs.nextgen_furniture.block.ConsoleBlock;
 import net.nhatjs.nextgen_furniture.block.ModBlocks;
@@ -22,8 +22,13 @@ import net.nhatjs.nextgen_furniture.blockentity.client.TrashCanBlockEntity;
 
 public class TrashCanRenderer implements BlockEntityRenderer<TrashCanBlockEntity> {
     private final Minecraft mc = Minecraft.getInstance();
+    private final BakedModel black;
+    private final BakedModel white;
 
-    public TrashCanRenderer(BlockEntityRendererProvider.Context ctx) {}
+    public TrashCanRenderer(BlockEntityRendererProvider.Context ctx) {
+        black = mc.getModelManager().getModel(NhatJSNextGenFurnitureModClient.TRASH_CAN_BLACK_EXTRA);
+        white = mc.getModelManager().getModel(NhatJSNextGenFurnitureModClient.TRASH_CAN_WHITE_EXTRA);
+    }
 
     @Override
     public void render(TrashCanBlockEntity be, float tickDelta, PoseStack poseStack,
@@ -40,8 +45,8 @@ public class TrashCanRenderer implements BlockEntityRenderer<TrashCanBlockEntity
             case EAST -> 270f;
         };
 
-        BakedModel black = mc.getBlockRenderer().getBlockModel(ModBlocks.TRASH_CAN_BLACK_EXTRA.get().defaultBlockState());
-        BakedModel white = mc.getBlockRenderer().getBlockModel(ModBlocks.TRASH_CAN_WHITE_EXTRA.get().defaultBlockState());
+        //BakedModel black = mc.getBlockRenderer().getBlockModel(ModBlocks.TRASH_CAN_BLACK_EXTRA.get().defaultBlockState());
+        //BakedModel white = mc.getBlockRenderer().getBlockModel(ModBlocks.TRASH_CAN_WHITE_EXTRA.get().defaultBlockState());
         ModelBlockRenderer bmr = mc.getBlockRenderer().getModelRenderer();
         VertexConsumer vc = multiBufferSource.getBuffer(RenderType.cutoutMipped());
 

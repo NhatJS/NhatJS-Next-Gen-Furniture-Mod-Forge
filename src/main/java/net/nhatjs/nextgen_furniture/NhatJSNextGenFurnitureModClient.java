@@ -11,12 +11,26 @@ import net.nhatjs.nextgen_furniture.block.ModBlocks;
 import net.nhatjs.nextgen_furniture.blockentity.ModBlockEntities;
 import net.nhatjs.nextgen_furniture.blockentity.renderer.ConsoleRenderer;
 import net.nhatjs.nextgen_furniture.blockentity.renderer.LaptopRenderer;
+import net.nhatjs.nextgen_furniture.blockentity.renderer.LightRenderer;
 import net.nhatjs.nextgen_furniture.blockentity.renderer.TrashCanRenderer;
 
 public final class NhatJSNextGenFurnitureModClient {
     public static void init(IEventBus eventBus) {
         eventBus.addListener(NhatJSNextGenFurnitureModClient::onClientSetup);
     }
+
+    public static ResourceLocation LAPTOP_SCREEN = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/laptop_screen");
+    public static ResourceLocation LAPTOP_SCREEN_ON = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/laptop_screen_on");
+    public static ResourceLocation TRASH_CAN_BLACK_EXTRA = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/trash_can_black_extra");
+    public static ResourceLocation TRASH_CAN_WHITE_EXTRA = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/trash_can_white_extra");
+    public static ResourceLocation GAME_CONSOLE_EXTRA = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/game_console_extra");
+    public static final ResourceLocation LIGHT_MODERN_EXTRA = new ResourceLocation(
+            NhatJSNextGenFurnitureMod.MOD_ID, "extra/light_modern_extra");
 
     @SuppressWarnings({"deprecation", "removal"})
     @SubscribeEvent
@@ -96,12 +110,27 @@ public final class NhatJSNextGenFurnitureModClient {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MONITOR_DUAL_ALT.get(), RenderType.cutoutMipped());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.MONITOR_DUAL_ALT_2.get(), RenderType.cutoutMipped());
 
-            //unused
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAPTOP_SCREEN_OFF.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAPTOP_SCREEN_ON.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TRASH_CAN_BLACK_EXTRA.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TRASH_CAN_WHITE_EXTRA.get(), RenderType.cutoutMipped());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.GAME_CONSOLE_EXTRA.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_3_K_M_WOOD_OAK.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_3_K_M_WOOD_BIRCH.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_3_K_M_WOOD_OAK_BASE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_3_K_M_WOOD_BIRCH_BASE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_2_K_M_WOOD_OAK.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_2_K_M_WOOD_BIRCH.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_2_K_M_WOOD_OAK_BASE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.DRAWER_2_K_M_WOOD_BIRCH_BASE.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_MODERN.get(), RenderType.cutoutMipped());
+            BlockEntityRenderers.register(ModBlockEntities.LIGHT_EXTRA.get(), LightRenderer::new);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_1X1_WOOD_OAK.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_1X1_WOOD_BIRCH.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_OAK.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_OAK_ALT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_OAK_ALT_2.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_BIRCH.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_BIRCH_ALT.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_2X1_WOOD_BIRCH_ALT_2.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_3X1_WOOD_OAK.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.TABLE_3X1_WOOD_BIRCH.get(), RenderType.cutoutMipped());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.WASHING_MACHINE.get(), RenderType.cutoutMipped());
         });
     }
 }

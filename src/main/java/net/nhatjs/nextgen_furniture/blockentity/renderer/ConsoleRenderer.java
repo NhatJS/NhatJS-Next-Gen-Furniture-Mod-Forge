@@ -10,21 +10,21 @@ import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureMod;
 import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureModClient;
 import net.nhatjs.nextgen_furniture.block.ConsoleBlock;
-import net.nhatjs.nextgen_furniture.block.ModBlocks;
 import net.nhatjs.nextgen_furniture.blockentity.client.ConsoleBlockEntity;
 
 public class ConsoleRenderer implements BlockEntityRenderer<ConsoleBlockEntity> {
     private final Minecraft mc = Minecraft.getInstance();
-
+    private final BakedModel console;
 
     public ConsoleRenderer(BlockEntityRendererProvider.Context ctx) {
+        console = mc.getModelManager().getModel(NhatJSNextGenFurnitureModClient.GAME_CONSOLE_EXTRA);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class ConsoleRenderer implements BlockEntityRenderer<ConsoleBlockEntity> 
             case EAST -> 270f;
         };
 
-        BakedModel screen = mc.getBlockRenderer().getBlockModel(ModBlocks.GAME_CONSOLE_EXTRA.get().defaultBlockState());
+        //BakedModel screen = mc.getBlockRenderer().getBlockModel(ModBlocks.GAME_CONSOLE_EXTRA.get().defaultBlockState());
         ModelBlockRenderer bmr = mc.getBlockRenderer().getModelRenderer();
         VertexConsumer vc = multiBufferSource.getBuffer(RenderType.cutoutMipped());
 
@@ -55,7 +55,7 @@ public class ConsoleRenderer implements BlockEntityRenderer<ConsoleBlockEntity> 
         poseStack.translate(0.5, 0.5, 0.5);
         poseStack.mulPose(Axis.YP.rotationDegrees(30F));
         poseStack.translate(-0.5, -0.5, -0.5);
-        bmr.renderModel(poseStack.last(), vc, null, screen, 1, 1, 1, light, overlay);
+        bmr.renderModel(poseStack.last(), vc, null, console, 1, 1, 1, light, overlay);
         poseStack.popPose();
 
         poseStack.popPose();

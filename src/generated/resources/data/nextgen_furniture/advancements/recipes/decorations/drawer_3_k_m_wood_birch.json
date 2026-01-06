@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_drawer_3_k_m_wood_birch_base": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nextgen_furniture:drawer_3_k_m_wood_birch_base"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_drawer_white": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nextgen_furniture:drawer_white"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nextgen_furniture:drawer_3_k_m_wood_birch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_drawer_white",
+      "has_drawer_3_k_m_wood_birch_base",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nextgen_furniture:drawer_3_k_m_wood_birch"
+    ]
+  },
+  "sends_telemetry_event": false
+}

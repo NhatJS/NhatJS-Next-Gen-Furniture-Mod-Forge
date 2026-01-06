@@ -17,7 +17,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.COMPUTER_FAN_BLADE_WHITE.get());
         basicItem(ModItems.COMPUTER_CPU.get());
         basicItem(ModItems.COMPUTER_RAM_GAMING.get());
+        basicItem(ModItems.DRAWER_WHITE.get());
         withExistingParent(ModBlocks.LAPTOP.get().asItem().toString(), modLoc("block/laptop"));
         basicItem(ModItems.NEXTGEN_FURNITURE_LOGO.get());
+        basicItem(ModItems.SCREWDRIVER.get());
     }
 }

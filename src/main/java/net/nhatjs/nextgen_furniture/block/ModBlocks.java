@@ -10,7 +10,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nhatjs.nextgen_furniture.NhatJSNextGenFurnitureMod;
-import net.nhatjs.nextgen_furniture.block.extra.NextGenExtraBlock;
 import net.nhatjs.nextgen_furniture.block.gamingpc.*;
 import net.nhatjs.nextgen_furniture.item.ModItems;
 
@@ -154,17 +153,47 @@ public class ModBlocks {
     public static final RegistryObject<Block> MONITOR_DUAL_ALT_2 = registerBlock("monitor_dual_alt_2",
             () -> new DualMonitorAlternate2Block(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
 
-    //unused
-    public static final RegistryObject<Block> LAPTOP_SCREEN_OFF = registerBlock("laptop_screen_off",
-            () -> new NextGenExtraBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable()));
-    public static final RegistryObject<Block> LAPTOP_SCREEN_ON = registerBlock("laptop_screen_on",
-            () -> new NextGenExtraBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable()));
-    public static final RegistryObject<Block> TRASH_CAN_BLACK_EXTRA = registerBlock("trash_can_black_extra",
-            () -> new NextGenExtraBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable()));
-    public static final RegistryObject<Block> TRASH_CAN_WHITE_EXTRA = registerBlock("trash_can_white_extra",
-            () -> new NextGenExtraBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable()));
-    public static final RegistryObject<Block> GAME_CONSOLE_EXTRA = registerBlock("game_console_extra",
-            () -> new NextGenExtraBlock(BlockBehaviour.Properties.of().noOcclusion().noLootTable()));
+
+    public static final RegistryObject<Block> DRAWER_3_K_M_WOOD_OAK = registerBlock("drawer_3_k_m_wood_oak",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_3_K_M_WOOD_BIRCH = registerBlock("drawer_3_k_m_wood_birch",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_3_K_M_WOOD_OAK_BASE = registerBlock("drawer_3_k_m_wood_oak_base",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_3_K_M_WOOD_BIRCH_BASE = registerBlock("drawer_3_k_m_wood_birch_base",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_2_K_M_WOOD_OAK = registerBlock("drawer_2_k_m_wood_oak",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_2_K_M_WOOD_BIRCH = registerBlock("drawer_2_k_m_wood_birch",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_2_K_M_WOOD_OAK_BASE = registerBlock("drawer_2_k_m_wood_oak_base",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> DRAWER_2_K_M_WOOD_BIRCH_BASE = registerBlock("drawer_2_k_m_wood_birch_base",
+            () -> new DrawerBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> LIGHT_MODERN = registerBlock("light_modern",
+            () -> new ModernLightBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_1X1_WOOD_OAK = registerBlock("table_1x1_wood_oak",
+            () -> new Table1x1Block(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_1X1_WOOD_BIRCH = registerBlock("table_1x1_wood_birch",
+            () -> new Table1x1Block(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_OAK = registerBlock("table_2x1_wood_oak",
+            () -> new Table2x1CenterBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_BIRCH = registerBlock("table_2x1_wood_birch",
+            () -> new Table2x1CenterBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_OAK_ALT = registerBlock("table_2x1_wood_oak_alt",
+            () -> new Table2x1LeftBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_BIRCH_ALT = registerBlock("table_2x1_wood_birch_alt",
+            () -> new Table2x1LeftBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_OAK_ALT_2 = registerBlock("table_2x1_wood_oak_alt_2",
+            () -> new Table2x1RightBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_2X1_WOOD_BIRCH_ALT_2 = registerBlock("table_2x1_wood_birch_alt_2",
+            () -> new Table2x1RightBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_3X1_WOOD_OAK = registerBlock("table_3x1_wood_oak",
+            () -> new Table3x1Block(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> TABLE_3X1_WOOD_BIRCH = registerBlock("table_3x1_wood_birch",
+            () -> new Table3x1Block(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
+    public static final RegistryObject<Block> WASHING_MACHINE = registerBlock("washing_machine",
+            () -> new WashingMachineBlock(BlockBehaviour.Properties.of().strength(1F).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

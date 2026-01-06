@@ -2,7 +2,6 @@ package net.nhatjs.nextgen_furniture;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,9 +15,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nhatjs.nextgen_furniture.block.ModBlocks;
 import net.nhatjs.nextgen_furniture.blockentity.ModBlockEntities;
-import net.nhatjs.nextgen_furniture.blockentity.renderer.ConsoleRenderer;
-import net.nhatjs.nextgen_furniture.blockentity.renderer.LaptopRenderer;
-import net.nhatjs.nextgen_furniture.blockentity.renderer.TrashCanRenderer;
 import net.nhatjs.nextgen_furniture.entity.ModEntities;
 import net.nhatjs.nextgen_furniture.entity.renderer.ChairRenderer;
 import net.nhatjs.nextgen_furniture.item.ModCreativeModTabs;
@@ -53,7 +49,14 @@ public class NhatJSNextGenFurnitureMod
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-
+        modEventBus.addListener((ModelEvent.RegisterAdditional event) -> {
+            event.register(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN);
+            event.register(NhatJSNextGenFurnitureModClient.LAPTOP_SCREEN_ON);
+            event.register(NhatJSNextGenFurnitureModClient.TRASH_CAN_BLACK_EXTRA);
+            event.register(NhatJSNextGenFurnitureModClient.TRASH_CAN_WHITE_EXTRA);
+            event.register(NhatJSNextGenFurnitureModClient.GAME_CONSOLE_EXTRA);
+            event.register(NhatJSNextGenFurnitureModClient.LIGHT_MODERN_EXTRA);
+        });
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
